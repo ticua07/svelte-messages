@@ -31,10 +31,15 @@
 	const submitMessage = async (event: any) => {
 		const data = new FormData(event.target);
 
-		await sp.from('messages').insert({
-			title: data.get('title'),
-			message: data.get('message')
-		});
+		if (
+			data.get('title')?.toString().trim() !== '' &&
+			data.get('message')?.toString().trim() !== ''
+		) {
+			await sp.from('messages').insert({
+				title: data.get('title'),
+				message: data.get('message')
+			});
+		}
 	};
 </script>
 
