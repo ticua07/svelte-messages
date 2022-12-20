@@ -4,7 +4,9 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Create a .env file following the structure of the .env.example file and then replace the placeholders with your supabase information.
+
+Once you've done that and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start the development server:
 
 ```bash
 npm run dev
